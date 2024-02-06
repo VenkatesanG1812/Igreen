@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #bce5f6;
+  border: solid 3px #ce9494;
 }
 
 .App-logo {
@@ -23,16 +25,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.report
+{
+  background-color: aquamarine;
+  border: solid 2px black;
 }
