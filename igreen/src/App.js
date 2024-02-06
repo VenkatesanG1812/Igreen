@@ -38,7 +38,6 @@ function App() {
         </button>
       </div>
       <div>
-        {/* Render the RobotSimulator component and pass the executed commands as props */}
         <ToyRobot commands={executedCommands} />
       </div>
     </div>

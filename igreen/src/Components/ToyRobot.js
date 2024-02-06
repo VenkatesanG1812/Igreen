@@ -8,7 +8,7 @@ const ToyRobot = ({ commands }) => {
   let robotDirection = 0;
   let robotX = 0;
   let robotY = 0;
-  let robotPlaced = false;
+  let robotplace = false;
   let tokens = [];
 
   const [finalreport, setreport] = useState([]);
@@ -39,16 +39,16 @@ const ToyRobot = ({ commands }) => {
           break;
         case "LEFT":
         case "RIGHT":
-          robotPlaced ? rotate(item[0]) : invalidCommand(item);
+          robotplace ? rotate(item[0]) : invalidcase(item);
           break;
         case "MOVE":
-          robotPlaced && canMove() ? move() : invalidCommand(item);
+          robotplace && canMove() ? move() : invalidcase(item);
           break;
         case "REPORT":
-          robotPlaced ? report() : invalidCommand(item);
+          robotplace ? report() : invalidcase(item);
           break;
         default:
-          invalidCommand(item);
+          invalidcase(item);
           break;
       }
     });
@@ -60,7 +60,7 @@ const ToyRobot = ({ commands }) => {
       robotX = +item[1][0];
       robotY = +item[1][1];
       robotDirection = whichDirection(item[1][2]);
-      robotPlaced = true;
+      robotplace = true;
     }
   };
 
@@ -99,7 +99,7 @@ const ToyRobot = ({ commands }) => {
     setreport(finalarray);
   };
 
-  const invalidCommand = (item) => {
+  const invalidcase = (item) => {
     console.log(">> INVALID COMMAND: '" + item.join(" ") + "' IGNORED");
     setreport([-1]);
   };
