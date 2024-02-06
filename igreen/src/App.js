@@ -16,7 +16,7 @@ function App() {
     const commandsArray = commandsInput
       .split("\n")
       .filter((command) => command.trim() !== "");
-    console.log("in app", commandsArray);
+    // console.log("in app", commandsArray);
     setExecutedCommands(commandsArray); // Update the executed commands state
   };
 

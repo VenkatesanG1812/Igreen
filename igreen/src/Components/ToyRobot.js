@@ -18,9 +18,9 @@ const ToyRobot = ({ commands }) => {
 
   const parseCommands = () => {
     commands.forEach((command) => {
-      console.log("in toy", command);
+      // console.log("in toy", command);
       let commandSplit = command.toUpperCase().split(" ");
-      console.log("slpit", commandSplit);
+      // console.log("slpit", commandSplit);
       if (commandSplit.length === 2) {
         commandSplit[1] = commandSplit[1].split(",");
         console.log("after split", commandSplit[1]);
@@ -30,7 +30,7 @@ const ToyRobot = ({ commands }) => {
       console.log("final push", commandSplit);
       tokens.push(commandSplit);
     });
-    console.log("Token", tokens);
+    // console.log("Token", tokens);
 
     tokens.forEach((item) => {
       switch (item[0]) {
